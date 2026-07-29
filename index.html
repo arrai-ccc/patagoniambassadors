@@ -246,6 +246,7 @@
     <a href="#territorio">Territorio</a>
     <a href="#terrenos">Los terrenos</a>
     <a href="#camino">El Camino</a>
+    <a href="#preguntas">Preguntas</a>
     <a href="https://arrai-ccc.github.io/parques-fundacion/" target="_blank" rel="noopener" class="nav-fund">Fundación ↗</a>
     <a href="#contacto" class="nav-cta">Conversemos</a>
   </div>
@@ -746,6 +747,79 @@
   </div>
 </section>
 
+<!-- PREGUNTAS FRECUENTES (público) -->
+<section class="section faq" id="preguntas" style="background:var(--blanco);">
+  <div class="inner" style="max-width:880px;">
+    <div class="eyebrow">Preguntas frecuentes</div>
+    <h2 class="stitle">Lo que más nos preguntan.</h2>
+    <div class="srule"></div>
+    <p class="ssub">Las dudas honestas son bienvenidas — de hecho, son señal de un buen embajador. Aquí las que más se repiten; el resto lo conversamos directo.</p>
+    <style>
+      .faq-list{margin-top:8px;border-top:1px solid var(--rule);}
+      .faq-item{border-bottom:1px solid var(--rule);}
+      .faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:flex-start;gap:16px;padding:22px 4px;font-family:var(--fr);font-weight:600;font-size:clamp(17px,2vw,20px);color:var(--abisal);line-height:1.32;transition:color .2s;}
+      .faq-item summary::-webkit-details-marker{display:none;}
+      .faq-item summary:hover{color:var(--bosque);}
+      .faq-item[open] summary{color:var(--bosque);}
+      .faq-q{flex:1;}
+      .faq-ic{flex:none;width:20px;height:20px;margin-top:5px;position:relative;}
+      .faq-ic::before,.faq-ic::after{content:'';position:absolute;background:var(--helecho);border-radius:2px;}
+      .faq-ic::before{left:0;top:9px;width:20px;height:2px;}
+      .faq-ic::after{left:9px;top:0;width:2px;height:20px;transition:transform .3s ease;}
+      .faq-item[open] .faq-ic::after{transform:scaleY(0);}
+      .faq-a{padding:0 44px 26px 4px;font-family:var(--it);font-size:15px;line-height:1.72;color:var(--ink-soft);}
+      .faq-a strong{color:var(--abisal);font-weight:600;}
+      .faq-a p+p{margin-top:12px;}
+      .faq-more{font-family:var(--it);font-size:14.5px;color:var(--ink-soft);margin-top:34px;}
+      .faq-more a{color:var(--bosque);font-weight:600;text-decoration:none;border-bottom:1px solid var(--rule);}
+      @media(prefers-reduced-motion:reduce){.faq-ic::after{transition:none;}}
+    </style>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary><span class="faq-q">Si algún día quiero vender mi terreno, ¿puedo? ¿A quién?</span><span class="faq-ic"></span></summary>
+        <div class="faq-a"><p>Sí. El terreno es tuyo, con escritura, y se transfiere como cualquier inmueble en Chile — sin permanencia mínima: vendes cuando quieras. Lo que viaja con él es el compromiso de conservación, porque el <strong>Derecho Real de Conservación va amarrado a la tierra, no a la persona</strong>: quien te compre recibe el terreno con las mismas reglas de protección. Tu comprador natural es alguien que valora exactamente eso — un entorno que seguirá intacto.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span class="faq-q">¿Mis hijos heredan el terreno?</span><span class="faq-ic"></span></summary>
+        <div class="faq-a"><p>Sí. El terreno se hereda como cualquier propiedad en Chile: entra a tu sucesión y pasa a tus herederos según tu testamento o la ley. Lo reciben con el <strong>Derecho Real de Conservación incorporado</strong> — las mismas condiciones que aceptaste al entrar. Para muchas familias eso es justamente el punto: no dejas solo un activo, dejas un territorio protegido que seguirá en pie para la próxima generación.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span class="faq-q">¿Hay señal e internet en el territorio?</span><span class="faq-ic"></span></summary>
+        <div class="faq-a"><p>Sí. Los terrenos cuentan con <strong>conectividad Starlink</strong>, que cambió por completo lo que significa vivir en la Patagonia profunda: hoy puedes trabajar, comunicarte y estar conectado sin renunciar al silencio y al aislamiento del lugar.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span class="faq-q">¿Cómo llegan la luz y el agua?</span><span class="faq-ic"></span></summary>
+        <div class="faq-a"><p>Con <strong>energía solar y agua de vertiente</strong>. Los terrenos se habilitan para funcionar de forma autónoma, sin tendidos eléctricos que crucen el paisaje ni dependencia de redes lejanas. Vivir liviano sobre la tierra es parte del diseño, no una limitación — la infraestructura base para habitar está resuelta.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span class="faq-q">Hay otros proyectos que también venden terrenos con conservación en Aysén. ¿En qué se diferencian?</span><span class="faq-ic"></span></summary>
+        <div class="faq-a"><p>Los conocemos y celebramos que existan — mientras más tierra protegida en Aysén, mejor para todos. La diferencia está en la <strong>arquitectura</strong>. En la mayoría de los modelos, la misma entidad comercial que vende administra también la promesa de conservación. Nosotros separamos los roles en tres: una <strong>Fundación independiente y sin fines de lucro</strong> que custodia el Derecho Real de Conservación, una comunidad de embajadores que son los dueños, y el brazo comercial que financia el modelo. La protección no depende de nuestra buena voluntad — queda amarrada legalmente, con un garante que no vende nada.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span class="faq-q">Si tanto quieren conservar, ¿por qué no donan la tierra al Estado o a CONAF?</span><span class="faq-ic"></span></summary>
+        <div class="faq-a">
+          <p><strong>Lo práctico:</strong> el Estado no tiene capacidad para recibir, financiar y cuidar cada paño valioso de Aysén — los parques nacionales ya operan con presupuestos ajustados, y la conservación privada existe para complementar, no para reemplazar.</p>
+          <p><strong>Lo económico:</strong> donar la tierra no la protege; protegerla cuesta todos los años, para siempre, y alguien tiene que financiarlo. Nuestro modelo hace que esa protección se autofinancie, en vez de depender de subsidios o filantropía.</p>
+          <p><strong>Y lo que creemos de verdad:</strong> la conservación funciona mejor con una comunidad que habita y cuida el territorio que con un cartel de «prohibido el paso» y nadie alrededor.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span class="faq-q">¿Cómo funciona apadrinar un m²? ¿Queda a mi nombre?</span><span class="faq-ic"></span></summary>
+        <div class="faq-a"><p>Apadrinar un m² es una <strong>donación a la Fundación</strong>, no una compra de tierra — y lo aclaramos siempre de frente. En Chile la ley no permite escriturar superficies tan pequeñas de suelo rural (el mínimo legal para inscribir es media hectárea), así que nadie puede poner un metro cuadrado a tu nombre en el Conservador de Bienes Raíces. Lo que sí ocurre: tu aporte entra a la Fundación que custodia la protección del parque a perpetuidad, y recibes un certificado con las <strong>coordenadas de tu m²</strong>, visible en el mapa del parque, más tu lugar en la comunidad de embajadores. El metro no es tuyo en papel; la protección que financia es real y queda amarrada a la tierra para siempre.</p></div>
+      </details>
+
+    </div>
+    <p class="faq-more">¿Tienes una pregunta que no está aquí? <a href="#contacto">Escríbenos y te respondemos directo →</a></p>
+  </div>
+</section>
+
 <!-- CONTACTO -->
 <section class="contacto" id="contacto">
   <div class="inner">
@@ -774,6 +848,7 @@
   <div class="foot-links">
     <a href="https://arrai-ccc.github.io/parques-fundacion/" target="_blank" rel="noopener">La Fundación</a>
     <a href="#terrenos">Los terrenos</a>
+    <a href="#preguntas">Preguntas</a>
     <a href="#contacto">Conversemos</a>
   </div>
   <span style="opacity:0.6;font-size:11px;display:block;margin-top:14px;">Todas las imágenes son reales, capturadas en terreno — sin IA.</span>

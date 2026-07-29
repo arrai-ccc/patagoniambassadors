@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parques la Patagonia — Sé embajador de un territorio protegido para siempre</title>
+<meta name="description" content="Adquiere un terreno dentro de una red de parques privados de conservación en Aysén, Patagonia chilena, protegidos a perpetuidad por el Derecho Real de Conservación. Quien entra custodia un territorio que existirá para siempre.">
+<meta property="og:title" content="Parques la Patagonia — Sé embajador de un territorio protegido para siempre">
+<meta property="og:description" content="Una red de parques privados de conservación en la Patagonia chilena. Adquieres un terreno y te vuelves embajador de un territorio protegido para siempre.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%8F%94%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Inter+Tight:ital,wght@0,300..700;1,400..600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --abisal:#0F4A5E; --bosque:#3E6B4F; --helecho:#5FA544; --glaciar:#7AAFC2;
+    --blanco:#F7F6F2; --hueso:#EDE6D6; --piedra:#6F756B;
+    --ink:#123845; --ink-soft:#46534d; --rule:#D6DAD1; --rule-soft:#E4E0D4;
+    --fr:'Fraunces',Georgia,'Times New Roman',serif;
+    --it:'Inter Tight',system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
+  body{font-family:var(--it);font-size:16px;line-height:1.7;color:var(--ink);background:var(--blanco);-webkit-font-smoothing:antialiased;}
+  ::selection{background:var(--bosque);color:#fff;}
+  h1,h2,h3,h4{font-family:var(--fr);letter-spacing:-0.01em;color:var(--abisal);font-optical-sizing:auto;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+
+  /* nav */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;transition:background .3s,backdrop-filter .3s,padding .3s;}
+  .nav.scrolled{background:rgba(247,246,242,0.96);backdrop-filter:blur(12px);padding:13px 40px;border-bottom:1px solid var(--rule-soft);}
+  .nav-logo img{height:42px;width:auto;display:block;transition:filter .3s;}
+  .nav:not(.scrolled) .nav-logo img{filter:brightness(0) invert(1) drop-shadow(0 1px 4px rgba(0,0,0,0.55));}
+  .nav-links{display:flex;gap:26px;align-items:center;}
+  .nav-links a{font-family:var(--it);font-size:12.5px;font-weight:500;letter-spacing:0.04em;color:rgba(255,255,255,0.88);text-decoration:none;transition:color .2s;}
+  .nav.scrolled .nav-links a{color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--glaciar);}
+  .nav.scrolled .nav-links a:hover{color:var(--bosque);}
+  .nav-cta{padding:9px 20px;border-radius:999px;font-size:11.5px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.5);color:#fff;text-decoration:none;transition:all .2s;}
+  .nav.scrolled .nav-cta{border-color:var(--bosque);color:var(--bosque);}
+  .nav-cta:hover{background:#fff;color:var(--abisal);}
+  .nav.scrolled .nav-cta:hover{background:var(--bosque);color:#fff;}
+  .nav-fund{display:inline-flex;align-items:center;gap:5px;font-family:var(--it);font-size:11.5px;font-weight:600;letter-spacing:0.04em;color:rgba(255,255,255,0.92);text-decoration:none;padding:8px 15px;border-radius:999px;border:1px solid rgba(122,175,194,0.55);transition:all .2s;white-space:nowrap;}
+  .nav.scrolled .nav-fund{color:var(--bosque);border-color:var(--bosque);}
+  .nav-fund:hover{background:var(--glaciar);color:var(--abisal);border-color:var(--glaciar);}
+  .nav.scrolled .nav-fund:hover{background:var(--bosque);color:#fff;border-color:var(--bosque);}
+  @media(max-width:820px){.nav-links a:not(.nav-cta):not(.nav-fund){display:none;}}
+
+  /* hero */
+  .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--abisal);}
+  .hero-bg{position:absolute;inset:0;background-image:url('assets/Fotos%20Parque%20Terrazas/DJI_20241208173004_0095_D.JPG');background-size:cover;background-position:center 45%;}
+  .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,74,94,0.5)0%,rgba(15,74,94,0.12)35%,rgba(15,74,94,0.9)100%);}
+  .hero-in{position:relative;z-index:2;max-width:1180px;margin:0 auto;width:100%;padding:0 40px 96px;}
+  .hero-eyebrow{font-family:var(--it);font-size:11px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--glaciar);margin-bottom:30px;}
+  .hero h1{font-family:var(--fr);font-weight:400;font-size:clamp(32px,4.4vw,56px);line-height:1.12;color:#fff;max-width:640px;margin-bottom:22px;letter-spacing:-0.01em;text-wrap:balance;font-variation-settings:'opsz' 100,'SOFT' 0,'WONK' 0;}
+  .hero h1 em{font-style:italic;color:var(--glaciar);font-variation-settings:'opsz' 100,'SOFT' 28,'WONK' 0;}
+  .hero-rule{width:56px;height:2px;background:var(--glaciar);margin-bottom:22px;opacity:0.6;}
+  .hero-desc{font-family:var(--it);font-size:clamp(15px,1.6vw,18px);font-weight:300;color:rgba(255,255,255,0.85);max-width:540px;line-height:1.7;}
+  .scroll-cue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;font-family:var(--it);font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.5);display:flex;flex-direction:column;align-items:center;gap:8px;}
+  .scroll-cue::after{content:'';width:1px;height:30px;background:rgba(255,255,255,0.3);animation:sp 2.4s ease-in-out infinite;}
+  @keyframes sp{0%,100%{opacity:.3;transform:scaleY(1);}50%{opacity:.8;transform:scaleY(1.2);}}
+
+  /* sections */
+  .section{padding:112px 40px;}
+  .inner{max-width:1080px;margin:0 auto;}
+  .wide{max-width:1180px;margin:0 auto;}
+  .eyebrow{font-family:var(--it);font-size:10px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--helecho);margin-bottom:16px;}
+  .stitle{font-family:var(--fr);font-weight:600;font-size:clamp(30px,4vw,48px);line-height:1.12;color:var(--abisal);margin-bottom:16px;text-wrap:balance;font-variation-settings:'opsz' 72;}
+  .srule{width:56px;height:2px;background:var(--bosque);margin-bottom:32px;opacity:0.8;}
+  .ssub{font-family:var(--it);font-size:18px;line-height:1.6;color:var(--ink-soft);max-width:720px;margin-bottom:36px;}
+  .sbody p{margin-bottom:16px;color:var(--ink-soft);}
+  .sbody strong{color:var(--abisal);font-weight:600;}
+
+  .model{background:var(--hueso);}
+
+  /* stat strip */
+  .stat-strip{display:flex;gap:38px;flex-wrap:wrap;margin:34px 0 4px;padding:26px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+  .stat-strip .st{min-width:120px;}
+  .stat-strip .st b{display:block;font-family:var(--fr);font-weight:600;font-size:34px;line-height:1;color:var(--bosque);}
+  .stat-strip .st span{font-family:var(--it);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--piedra);margin-top:8px;display:block;}
+
+  /* por qué ahora */
+  .now{background:var(--abisal);color:#fff;position:relative;overflow:hidden;}
+  .now .eyebrow{color:var(--glaciar);} .now .stitle{color:#fff;} .now .srule{background:var(--glaciar);}
+  .now .ssub{color:rgba(255,255,255,0.82);}
+  .now-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:14px;}
+  @media(max-width:820px){.now-cases{grid-template-columns:1fr;}}
+  .now-case{border-top:2px solid var(--glaciar);padding-top:18px;}
+  .now-case b{font-family:var(--fr);font-weight:600;font-size:30px;color:var(--glaciar);display:block;line-height:1;}
+  .now-case h4{font-family:var(--fr);font-weight:600;font-size:17px;color:#fff;margin:12px 0 6px;}
+  .now-case p{font-family:var(--it);font-size:13px;line-height:1.55;color:rgba(255,255,255,0.72);}
+  .now-turn{font-family:var(--fr);font-style:italic;font-size:clamp(19px,2.3vw,26px);line-height:1.4;color:#fff;max-width:720px;margin-top:44px;text-wrap:balance;}
+  .now-turn strong{color:var(--glaciar);font-style:normal;font-weight:600;}
+
+  /* parks */
+  .parks{background:var(--blanco);}
+  .parks-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:8px;}
+  @media(max-width:880px){.parks-grid{grid-template-columns:1fr;}}
+  .park{background:var(--hueso);border-radius:6px;overflow:hidden;border-top:3px solid var(--bosque);transition:transform .4s,box-shadow .4s;}
+  .park:hover{transform:translateY(-3px);box-shadow:0 16px 40px -12px rgba(15,74,94,0.18);}
+  .park-photo{width:100%;aspect-ratio:16/10;background-size:cover;background-position:center;background-color:var(--abisal);}
+  .park-body{padding:24px 28px 28px;}
+  .park-eyebrow{font-family:var(--it);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--helecho);margin-bottom:9px;}
+  .park-name{font-family:var(--fr);font-weight:600;font-size:22px;color:var(--abisal);margin-bottom:6px;}
+  .park-meta{font-family:var(--it);font-size:12px;color:var(--piedra);margin-bottom:12px;letter-spacing:0.02em;}
+  .park-meta b{color:var(--bosque);font-weight:600;}
+  .park-desc{font-family:var(--it);font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
+  .park-tag{display:inline-block;margin-top:12px;background:var(--bosque);color:#fff;font-family:var(--it);font-size:9.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:3px 10px;border-radius:999px;}
+  .park-tag.proc{background:var(--hueso);color:var(--piedra);border:1px solid var(--rule);}
+
+  /* DRC band */
+  .drc{position:relative;background:var(--abisal);color:#fff;overflow:hidden;}
+  .drc-bg{position:absolute;inset:0;background-image:url('assets/Fotos%20Parque%20Terrazas/DJI_20241208171925_0058_D.JPG');background-size:cover;background-position:center;opacity:0.20;}
+  .drc-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,74,94,0.6)0%,rgba(15,74,94,0.92)100%);}
+  .drc .inner{position:relative;z-index:2;}
+  .drc .eyebrow{color:var(--glaciar);} .drc .stitle{color:#fff;} .drc .sbody p{color:rgba(255,255,255,0.82);} .drc .sbody strong{color:#fff;} .drc .srule{background:var(--glaciar);}
+  .drc-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px;}
+  @media(max-width:780px){.drc-cols{grid-template-columns:1fr;}}
+  .drc-box{border:1px solid rgba(122,175,194,0.28);border-radius:6px;padding:24px 26px;}
+  .drc-box .lab{font-family:var(--it);font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--glaciar);margin-bottom:14px;}
+  .drc-box ul{list-style:none;} .drc-box li{font-family:var(--it);font-size:14px;color:rgba(255,255,255,0.88);padding:7px 0 7px 16px;position:relative;}
+  .drc-box li::before{content:'';position:absolute;left:0;top:14px;width:6px;height:1px;background:var(--glaciar);}
+  .drc-pill{display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;border:1px solid rgba(122,175,194,0.5);color:var(--glaciar);font-family:var(--it);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:999px;}
+
+  /* embajadores band */
+  .gband{position:relative;height:54vh;min-height:360px;background-size:cover;background-position:center 35%;overflow:hidden;}
+  .gband::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,74,94,0.35)0%,rgba(15,74,94,0.68)100%);}
+  .gband-in{position:relative;z-index:2;max-width:880px;margin:0 auto;height:100%;padding:0 40px 56px;display:flex;flex-direction:column;justify-content:flex-end;}
+  .gband-eyebrow{font-family:var(--it);font-size:11px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--glaciar);margin-bottom:16px;}
+  .gband-quote{font-family:var(--fr);font-style:italic;font-weight:500;font-size:clamp(22px,2.8vw,32px);line-height:1.3;color:#fff;max-width:720px;text-wrap:balance;}
+
+  /* cascade strip */
+  .cas-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;}
+  @media(max-width:880px){.cas-strip{grid-template-columns:1fr 1fr;gap:28px 24px;}}
+  @media(max-width:520px){.cas-strip{grid-template-columns:1fr;}}
+  .cas-strip>div{border-top:2px solid var(--bosque);padding-top:18px;}
+  .cas-strip>div>span{display:block;font-family:var(--fr);font-weight:600;font-size:14px;letter-spacing:.14em;color:var(--bosque);margin-bottom:12px;}
+  .cas-strip h4{font-family:var(--fr);font-weight:600;font-size:17px;line-height:1.25;color:var(--abisal);margin-bottom:8px;}
+  .cas-strip p{font-family:var(--it);font-size:13px;line-height:1.58;color:var(--ink-soft);}
+
+  .bandvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .camino-grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,74,94,0.5)0%,rgba(15,74,94,0.9)100%);}
+
+  /* terrenos / viewer */
+  .lots{background:var(--hueso);}
+  .lots-note{font-family:var(--it);font-size:13px;color:var(--ink-soft);font-style:italic;margin-bottom:28px;padding:14px 18px;background:var(--blanco);border-left:2px solid var(--bosque);max-width:780px;border-radius:0 4px 4px 0;}
+  .viewer-wrap{position:relative;width:100vw;margin-left:calc(50% - 50vw);height:82vh;min-height:520px;max-height:900px;margin-bottom:40px;background:#08222b;box-shadow:0 14px 44px -14px rgba(15,74,94,0.45);}
+  .viewer-frame{width:100%;height:100%;border:0;display:block;}
+  .viewer-expand{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:5;display:inline-flex;align-items:center;gap:7px;background:rgba(12,40,48,0.82);backdrop-filter:blur(8px);border:1px solid rgba(122,175,194,0.4);color:#fff;font-family:var(--it);font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:9px 18px;border-radius:999px;cursor:pointer;transition:background .2s;}
+  .viewer-expand:hover{background:var(--bosque);}
+  .viewer-wrap:fullscreen .viewer-expand,.viewer-wrap:-webkit-full-screen .viewer-expand{display:none;}
+  .sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px;}
+  @media(max-width:880px){.sectors{grid-template-columns:1fr;}}
+  .sector{background:var(--blanco);border-radius:6px;overflow:hidden;border-top:3px solid var(--bosque);}
+  .sector-photo{height:150px;background-size:cover;background-position:center;}
+  .sector-body{padding:22px 26px 24px;}
+  .sector-name{font-family:var(--fr);font-weight:600;font-size:20px;color:var(--abisal);margin-bottom:6px;}
+  .sector-desc{font-family:var(--it);font-size:13px;color:var(--ink-soft);line-height:1.6;}
+  .sector-chars{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px;}
+  .sector-chars span{font-family:var(--it);font-size:10.5px;letter-spacing:0.04em;color:var(--bosque);background:var(--hueso);border:1px solid var(--rule);padding:4px 11px;border-radius:999px;}
+
+  /* map */
+  .mapsec{background:var(--abisal);color:#fff;padding:96px 0 0;overflow:hidden;}
+  .map-head{max-width:1180px;margin:0 auto;padding:0 40px 48px;}
+  .map-head .eyebrow{color:var(--glaciar);}
+  .map-head h2{font-family:var(--fr);font-weight:600;font-size:clamp(28px,3.6vw,44px);color:#fff;line-height:1.1;}
+  .map-head p{font-family:var(--it);color:rgba(255,255,255,0.78);max-width:680px;margin-top:14px;font-size:15px;}
+  .map-wrap{position:relative;width:100%;height:64vh;min-height:440px;max-height:680px;background:#08222b;}
+  .map-wrap iframe{width:100%;height:100%;border:0;filter:saturate(0.92) contrast(1.04);}
+  .map-corner{position:absolute;left:26px;bottom:26px;z-index:5;background:rgba(15,74,94,0.9);backdrop-filter:blur(10px);color:#fff;padding:14px 18px;border-radius:6px;border-left:2px solid var(--glaciar);font-family:var(--it);font-size:12px;line-height:1.5;max-width:290px;}
+  .map-corner strong{display:block;font-family:var(--fr);font-weight:600;font-size:14px;margin-bottom:4px;}
+
+  /* cómo se entra */
+  .enter{background:var(--blanco);}
+  .enter-hook{background:var(--abisal);color:#fff;border-radius:8px;padding:44px 46px;margin-top:8px;}
+  .enter-hook h3{font-family:var(--fr);font-weight:500;font-style:italic;font-size:clamp(24px,3vw,36px);color:#fff;line-height:1.22;max-width:640px;}
+  .enter-hook .sub{font-family:var(--it);color:rgba(255,255,255,0.78);font-size:15px;margin-top:16px;max-width:560px;line-height:1.6;}
+  .enter-ways{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px;}
+  @media(max-width:880px){.enter-ways{grid-template-columns:1fr;}}
+  .way{background:var(--hueso);border-top:3px solid var(--bosque);padding:22px 24px;border-radius:0 0 6px 6px;}
+  .way h4{font-family:var(--fr);font-size:18px;color:var(--abisal);margin-bottom:6px;}
+  .way p{font-family:var(--it);font-size:13px;color:var(--ink-soft);line-height:1.55;}
+  .enter-cta{display:inline-flex;align-items:center;gap:9px;margin-top:30px;background:var(--bosque);color:#fff;font-family:var(--it);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:15px 30px;border-radius:999px;text-decoration:none;transition:background .2s;}
+  .enter-cta:hover{background:var(--abisal);}
+
+  /* camino */
+  .camino{position:relative;background:var(--abisal);color:#fff;overflow:hidden;}
+  .camino-bg{position:absolute;inset:0;background-image:url('assets/Fotos%20Parque%20Terrazas/DJI_20241208172803_0091_D.JPG');background-size:cover;background-position:center;opacity:0.26;}
+  .camino-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,74,94,0.55)0%,rgba(15,74,94,0.9)100%);}
+  .camino .inner{position:relative;z-index:2;text-align:center;max-width:820px;}
+  .camino .eyebrow{color:var(--glaciar);}
+  .camino h2{color:#fff;font-style:italic;font-weight:500;}
+  .camino p{font-family:var(--it);color:rgba(255,255,255,0.84);max-width:640px;margin:18px auto 0;}
+
+  /* lead form */
+  .lead{display:flex;gap:10px;max-width:460px;flex-wrap:wrap;justify-content:center;margin:0 auto;}
+  .lead input{flex:1;min-width:200px;padding:14px 18px;border:1px solid var(--rule);border-radius:999px;font-family:var(--it);font-size:15px;background:#fff;color:var(--ink);outline:none;}
+  .lead input:focus{border-color:var(--bosque);}
+  .lead button{padding:14px 26px;border:none;border-radius:999px;background:var(--bosque);color:#fff;font-family:var(--it);font-size:12.5px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:background .2s;}
+  .lead button:hover{background:var(--abisal);}
+  .lead-ok{font-family:var(--fr);font-style:italic;font-size:20px;color:var(--bosque);}
+  .contact-alt{margin-top:22px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+  .contact-alt a{display:inline-flex;align-items:center;gap:7px;font-family:var(--it);font-size:12.5px;font-weight:600;letter-spacing:0.03em;color:var(--bosque);text-decoration:none;border:1px solid var(--rule);padding:10px 18px;border-radius:999px;transition:all .2s;}
+  .contact-alt a:hover{background:var(--bosque);color:#fff;border-color:var(--bosque);}
+
+  /* momentos */
+  .momentos{background:var(--abisal);padding:0;}
+  .momentos-head{max-width:1180px;margin:0 auto;padding:48px 40px 22px;}
+  .momentos-head .eyebrow{color:var(--glaciar);margin-bottom:0;}
+  .momentos-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+  .momentos-inner video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#08222b;}
+  @media(max-width:700px){.momentos-inner{grid-template-columns:1fr;}}
+
+  /* contacto */
+  .contacto{position:relative;text-align:center;padding:120px 40px;background-image:url('assets/Fotos%20Parque%20Terrazas/DJI_20241208111530_0014_D.JPG');background-size:cover;background-position:center;}
+  .contacto::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(247,246,242,0.92),rgba(237,230,214,0.97));}
+  .contacto .inner{position:relative;z-index:2;max-width:720px;}
+  .contacto h2{color:var(--abisal);font-size:clamp(30px,4vw,46px);margin-bottom:14px;}
+  .contacto p{font-family:var(--it);color:var(--ink-soft);margin-bottom:6px;}
+
+  footer{background:var(--abisal);color:rgba(255,255,255,0.62);padding:48px 40px;text-align:center;font-family:var(--it);font-size:12px;letter-spacing:0.04em;line-height:1.9;}
+  footer strong{color:rgba(255,255,255,0.9);font-weight:600;font-family:var(--fr);}
+  footer a{color:var(--glaciar);text-decoration:none;}
+  footer .foot-links{margin-top:12px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;}
+
+  /* continental map + pin */
+  .mapfig{position:relative;margin:32px 0 0;}
+  .mapfig .mapimg{position:relative;width:100%;aspect-ratio:16/9;background-image:url('assets/renders/cartografia-sudamerica.jpg');background-size:cover;background-position:center;border-radius:8px;box-shadow:0 18px 46px rgba(15,74,94,.16);overflow:hidden;}
+  .mappin{position:absolute;left:43%;top:80%;z-index:3;transform:translate(-50%,-50%);}
+  .mappin .dot{width:12px;height:12px;border-radius:50%;background:var(--abisal);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45);position:relative;z-index:2;}
+  .mappin .ring{position:absolute;left:50%;top:50%;width:12px;height:12px;border-radius:50%;border:2px solid var(--helecho);transform:translate(-50%,-50%);animation:pinpulse 2.6s ease-out infinite;}
+  @keyframes pinpulse{0%{width:12px;height:12px;opacity:.85;}100%{width:46px;height:46px;opacity:0;}}
+  .mappin .plabel{position:absolute;right:22px;top:50%;transform:translateY(-50%);white-space:nowrap;background:rgba(247,246,242,0.94);border:1px solid var(--rule);color:var(--abisal);font-family:var(--fr);font-size:13px;letter-spacing:.02em;padding:5px 12px;border-radius:4px;box-shadow:0 4px 14px rgba(15,74,94,.18);}
+  .mappin .plabel::before{content:'';position:absolute;right:-12px;top:50%;width:12px;height:1px;background:var(--abisal);opacity:.55;transform:translateY(-50%);}
+  @media(max-width:560px){.mappin .plabel{font-size:11px;padding:4px 9px;right:18px;}.mappin .plabel::before{right:-10px;width:10px;}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-logo"><img src="assets/brand/parques-logo.png" alt="Parques la Patagonia"></div>
+  <div class="nav-links">
+    <a href="#modelo">El modelo</a>
+    <a href="#territorio">Territorio</a>
+    <a href="#terrenos">Los terrenos</a>
+    <a href="#camino">El Camino</a>
+    <a href="https://arrai-ccc.github.io/parques-fundacion/" target="_blank" rel="noopener" class="nav-fund">Fundación ↗</a>
+    <a href="#contacto" class="nav-cta">Conversemos</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"><video class="bandvid" autoplay muted loop playsinline poster="media/hero.jpg"><source src="media/hero.mp4" type="video/mp4"></video></div>
+  <div class="hero-in">
+    <div class="hero-eyebrow">Red de parques privados de conservación · Patagonia chilena</div>
+    <h1>Sé embajador de un territorio<br><em>protegido para siempre.</em></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-desc">Adquiere un terreno dentro de una red de parques privados de la Patagonia chilena, protegidos a perpetuidad por el Derecho Real de Conservación. Quien entra custodia un territorio que existirá para siempre.</p>
+  </div>
+  <div class="scroll-cue">Descubre</div>
+</header>
+
+<!-- DÓNDE QUEDA · CARTOGRAFÍA -->
+<section class="section" id="donde" style="background:linear-gradient(180deg,#f7f6f2,#ede6d6);">
+  <div class="inner">
+    <div class="eyebrow">¿Dónde queda?</div>
+    <h2 class="stitle">En el sur del mundo, en Aysén.</h2>
+    <div class="srule"></div>
+    <p class="ssub">En el extremo sur de Sudamérica, en la Patagonia chilena — Región de Aysén, en la cuenca del <b>Lago General Carrera</b>, el segundo lago más grande del continente. Agua glaciar, bosque nativo de lenga y ñirre, montañas de escala monumental. Aquí están nuestros parques.</p>
+    <figure class="mapfig">
+      <div class="mapimg">
+        <div class="mappin"><span class="ring"></span><span class="dot"></span><span class="plabel">Lago General Carrera</span></div>
+      </div>
+      <figcaption style="text-align:center;font-family:var(--fr);font-style:italic;font-size:13px;color:var(--piedra);margin-top:13px;">Sudamérica · Lago General Carrera, Región de Aysén, Patagonia chilena — cartografía ilustrativa</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- POR QUÉ AHORA -->
+<section class="section now">
+  <div class="inner">
+    <div class="eyebrow">Por qué ahora</div>
+    <h2 class="stitle">La Patagonia está cambiando. La pregunta es cómo.</h2>
+    <div class="srule"></div>
+    <p class="ssub">La infraestructura llega: la pavimentación de la Carretera Austral y la ampliación del aeropuerto de Balmaceda acercan el sur como nunca antes. Donde llegó el crecimiento sin un modelo, el paisaje pagó el precio. Tres lugares comparables lo muestran.</p>
+    <div class="now-cases">
+      <div class="now-case"><b>+204%</b><h4>Puerto Varas</h4><p>Crecimiento demográfico en 15 años; el Lago Llanquihue con episodios críticos de floraciones. Un destino que se saturó.</p></div>
+      <div class="now-case"><b>2017</b><h4>Villarrica</h4><p>El lago declarado «zona saturada» tras la venta masiva de parcelaciones y el crecimiento sin reglas.</p></div>
+      <div class="now-case"><b>Cerro Castillo</b><h4>Aysén, hoy</h4><p>Superficie privada subdividida y fragmentada a ritmo acelerado, sin un marco que la proteja.</p></div>
+    </div>
+    <p class="now-turn">La ola llega igual. La única decisión es <strong>cómo</strong>: un modelo que subdivide y agota, o uno que protege el territorio con reglas permanentes — para que exista dentro de cien años.</p>
+  </div>
+</section>
+
+<!-- MODELO -->
+<section class="section model" id="modelo">
+  <div class="inner">
+    <div class="eyebrow">El modelo</div>
+    <h2 class="stitle">Conservar y habitar, del mismo lado.</h2>
+    <div class="srule"></div>
+    <p class="ssub">Parques la Patagonia es una red de parques privados de conservación en la Región de Aysén. Dentro de cada parque, unos pocos terrenos habitables conviven con la conservación. Cada compra financia la protección del parque y la expansión hacia nuevas áreas — tres entidades, un solo propósito.</p>
+    <div class="cyc">
+      <style>
+      .cyc{margin-top:16px}
+      .cyc-stage{max-width:720px;margin:0 auto}
+      .cyc-stage svg{width:100%;height:auto;display:block;overflow:visible}
+      .cyc-node{transform-box:fill-box;transform-origin:center;animation:cycpulse 4.2s ease-in-out infinite}
+      .cyc-node.n2{animation-delay:1.4s}.cyc-node.n3{animation-delay:2.8s}
+      @keyframes cycpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+      .cyc-halo{transform-box:fill-box;transform-origin:center;animation:cychalo 4.2s ease-in-out infinite}
+      .cyc-halo.n2{animation-delay:1.4s}.cyc-halo.n3{animation-delay:2.8s}
+      @keyframes cychalo{0%,100%{opacity:0;transform:scale(.82)}45%{opacity:.42;transform:scale(1.18)}}
+      .cyc-name{font-family:var(--fr);font-weight:600;font-size:21px;fill:#0F4A5E}
+      .cyc-role{font-family:var(--it);font-size:12px;fill:#6a8472}
+      .cyc-flow{font-family:var(--it);font-weight:600;font-size:11px;letter-spacing:.14em;fill:#3E6B4F}
+      .cyc-core-k{font-family:var(--it);font-weight:600;font-size:11px;letter-spacing:.18em;fill:#7AAFC2}
+      .cyc-core-t{font-family:var(--fr);font-style:italic;font-size:18px;fill:#F7F6F2}
+      .cyc-cap{text-align:center;font-family:var(--fr);font-style:italic;font-weight:500;font-size:clamp(17px,2vw,22px);line-height:1.45;color:#0F4A5E;max-width:680px;margin:14px auto 0;text-wrap:balance}
+      .cyc-cap strong{font-style:normal}
+      @media(prefers-reduced-motion:reduce){.cyc-node,.cyc-halo,.cyc-arrow{animation:none!important}}
+      </style>
+      <div class="cyc-stage">
+      <svg viewBox="0 0 920 620" role="img" aria-label="El ciclo simbiótico: proyecto, fundacion y comunidad sostienen el territorio para siempre">
+        <circle class="cyc-halo n1" cx="460" cy="150" r="70" fill="#3E6B4F"/>
+        <circle class="cyc-halo n2" cx="700" cy="455" r="70" fill="#3E6B4F"/>
+        <circle class="cyc-halo n3" cx="220" cy="455" r="70" fill="#3E6B4F"/>
+        <path id="cycA" fill="none" stroke="#3E6B4F" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="2 9" d="M460,150 Q655,300 700,455"/>
+        <path id="cycB" fill="none" stroke="#3E6B4F" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="2 9" d="M700,455 Q460,548 220,455"/>
+        <path id="cycC" fill="none" stroke="#3E6B4F" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="2 9" d="M220,455 Q265,300 460,150"/>
+        <g fill="#5FA544">
+          <path class="cyc-arrow" d="M-5,-4 L7,0 L-5,4 L-1,0 Z"><animateMotion dur="4.6s" repeatCount="indefinite" rotate="auto"><mpath href="#cycA"/></animateMotion></path>
+          <path class="cyc-arrow" d="M-5,-4 L7,0 L-5,4 L-1,0 Z"><animateMotion dur="4.6s" begin="2.3s" repeatCount="indefinite" rotate="auto"><mpath href="#cycA"/></animateMotion></path>
+          <path class="cyc-arrow" d="M-5,-4 L7,0 L-5,4 L-1,0 Z"><animateMotion dur="4.6s" begin="1.5s" repeatCount="indefinite" rotate="auto"><mpath href="#cycB"/></animateMotion></path>
+          <path class="cyc-arrow" d="M-5,-4 L7,0 L-5,4 L-1,0 Z"><animateMotion dur="4.6s" begin="3.8s" repeatCount="indefinite" rotate="auto"><mpath href="#cycB"/></animateMotion></path>
+          <path class="cyc-arrow" d="M-5,-4 L7,0 L-5,4 L-1,0 Z"><animateMotion dur="4.6s" begin="3s" repeatCount="indefinite" rotate="auto"><mpath href="#cycC"/></animateMotion></path>
+          <path class="cyc-arrow" d="M-5,-4 L7,0 L-5,4 L-1,0 Z"><animateMotion dur="4.6s" begin="0.7s" repeatCount="indefinite" rotate="auto"><mpath href="#cycC"/></animateMotion></path>
+        </g>
+        <text class="cyc-flow" x="628" y="246" text-anchor="middle">FINANCIA LA PROTECCIÓN</text>
+        <text class="cyc-flow" x="460" y="536" text-anchor="middle">GARANTÍA PERPETUA</text>
+        <text class="cyc-flow" x="292" y="246" text-anchor="middle">SOSTIENE Y HACE CRECER</text>
+        <circle cx="460" cy="353" r="92" fill="#0F4A5E"/>
+        <circle cx="460" cy="353" r="92" fill="none" stroke="#3E6B4F" stroke-opacity=".5"/>
+        <text x="460" y="338" text-anchor="middle" class="cyc-core-k">EL TERRITORIO</text>
+        <text x="460" y="362" text-anchor="middle" class="cyc-core-t">protegido</text>
+        <text x="460" y="384" text-anchor="middle" class="cyc-core-t">para siempre</text>
+        <g class="cyc-node n1"><circle cx="460" cy="150" r="70" fill="#F7F6F2" stroke="#3E6B4F" stroke-width="2"/>
+          <text x="460" y="144" text-anchor="middle" class="cyc-name">Proyecto</text>
+          <text x="460" y="167" text-anchor="middle" class="cyc-role">vende y expande</text></g>
+        <g class="cyc-node n2"><circle cx="700" cy="455" r="70" fill="#F7F6F2" stroke="#3E6B4F" stroke-width="2"/>
+          <text x="700" y="449" text-anchor="middle" class="cyc-name">Fundación</text>
+          <text x="700" y="472" text-anchor="middle" class="cyc-role">custodia el DRC</text></g>
+        <g class="cyc-node n3"><circle cx="220" cy="455" r="70" fill="#F7F6F2" stroke="#3E6B4F" stroke-width="2"/>
+          <text x="220" y="449" text-anchor="middle" class="cyc-name">Comunidad</text>
+          <text x="220" y="472" text-anchor="middle" class="cyc-role">de embajadores</text></g>
+      </svg>
+      </div>
+      <p class="cyc-cap">Un ecosistema simbiótico: la venta financia la protección, la protección da garantía perpetua, y la comunidad de embajadores la sostiene y la hace crecer. <strong>Cada terreno protegido hace posible el siguiente.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- TERRITORIO + PARQUES -->
+<section class="section parks" id="territorio">
+  <div class="wide">
+    <div class="eyebrow">El territorio</div>
+    <h2 class="stitle">Uno de los ecosistemas mejor conservados del planeta.</h2>
+    <div class="srule"></div>
+    <p class="ssub">Sobre el Lago General Carrera, en la comuna de Río Ibáñez — bosque nativo de lenga y ñirre, ríos y lagunas glaciares, montañas de escala monumental. La mayor parte del territorio permanece protegido; solo una pequeña zona admite espacios de vida integrados al paisaje.</p>
+    <div class="stat-strip">
+      <div class="st"><b>1.122 ha</b><span>protegidas hoy · títulos firmes</span></div>
+      <div class="st"><b>4</b><span>parques en la red</span></div>
+      <div class="st"><b>5.000 ha</b><span>meta 2030</span></div>
+      <div class="st"><b>17.000 ha</b><span>visión 2040 · corredor</span></div>
+    </div>
+    <div class="parks-grid" style="margin-top:34px;">
+      <div class="park">
+        <div class="park-photo" style="background-image:url('assets/Fotos%20Parque%20Terrazas/DJI_20241208172609_0088_D.JPG');"></div>
+        <div class="park-body"><div class="park-eyebrow">Oferta activa</div><div class="park-name">Terrazas del Lago</div><div class="park-meta"><b>148 ha</b> · 100% bajo DRC · sobre el General Carrera</div><p class="park-desc">Terrazas naturales y vistas abiertas hacia el lago y las montañas. Donde hoy es posible volverse embajador.</p><span class="park-tag">Terrenos disponibles</span></div>
+      </div>
+      <div class="park">
+        <div class="park-photo" style="background-image:url('assets/Fotos%20Parque%20Terrazas/DJI_20241208170528_0038_D.JPG');"></div>
+        <div class="park-body"><div class="park-eyebrow">El origen</div><div class="park-name">Glaciares del Río Müller</div><div class="park-meta"><b>270 ha</b> · 100% bajo DRC · el parque fundacional</div><p class="park-desc">El parque que dio origen al proyecto. Bosques de lenga, lagunas de origen glaciar y más de veinte años de conservación activa.</p></div>
+      </div>
+      <div class="park">
+        <div class="park-photo" style="background-image:url('assets/Fotos%20Avellano/web/avellano-caballos-valle.jpg');background-position:center 58%;"></div>
+        <div class="park-body"><div class="park-eyebrow">Cultura + naturaleza</div><div class="park-name">La Ponderosa del Avellano</div><div class="park-meta"><b>704 ha</b> · DRC en trámite · Valle de Avellanos</div><p class="park-desc">Donde naturaleza y cultura patagónica conviven — arrieros, transhumancia y un paisaje de profunda identidad territorial.</p></div>
+      </div>
+      <div class="park">
+        <div class="park-photo" style="background-image:url('assets/Fotos%20Parque%20Terrazas/DJI_20241208112354_0027_D.JPG');"></div>
+        <div class="park-body"><div class="park-eyebrow">Restauración</div><div class="park-name">Parque de la Bahía</div><div class="park-meta"><b>~70 ha</b> · en proceso · borde de lago</div><p class="park-desc">Valle, bosque y orilla de lago con alto valor paisajístico y potencial de restauración ecológica activa.</p><span class="park-tag proc">En incorporación</span></div>
+      </div>
+    </div>
+    <p style="font-family:var(--it);font-size:12px;color:var(--piedra);margin-top:22px;font-style:italic;">La Sierra del Avellano forma parte de un corredor biológico que enlaza áreas protegidas de la Patagonia. Nuestros parques son parte de ese tejido — la visión 2040 es contribuir a un corredor continuo de conservación.</p>
+  </div>
+</section>
+
+<!-- DRC -->
+<section class="section drc">
+  <div class="drc-bg"></div>
+  <div class="inner">
+    <div class="eyebrow">La garantía</div>
+    <h2 class="stitle">Protección permanente, independiente del propietario.</h2>
+    <div class="srule"></div>
+    <div class="sbody"><p>El <strong>Derecho Real de Conservación</strong> (Ley chilena N° 20.930) fija condiciones de conservación permanentes sobre el territorio, sin importar quién sea su dueño en el futuro. Se inscribe en el Conservador de Bienes Raíces y acompaña al terreno para siempre. No es una restricción — es una garantía: asegura que tu entorno permanezca intacto.</p></div>
+    <span class="drc-pill">Ley chilena N° 20.930 · Derecho Real de Conservación</span>
+    <div class="drc-cols">
+      <div class="drc-box"><div class="lab">Qué puede hacer el embajador</div><ul>
+        <li>Habitar el terreno con construcción integrada al paisaje</li>
+        <li>Recorrer senderos y acceder al parque completo</li>
+        <li>Construir bajo principios de baja intervención</li>
+        <li>Transferir su terreno (el DRC acompaña al nuevo dueño)</li>
+      </ul></div>
+      <div class="drc-box"><div class="lab">Qué no está permitido</div><ul>
+        <li>Explotación forestal o extracción de recursos</li>
+        <li>Construcciones que alteren el paisaje</li>
+        <li>Actividades que dañen flora y fauna nativa</li>
+        <li>Fragmentar o subdividir el terreno</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND: bosque -->
+<div class="gband" style="height:48vh;min-height:320px;">
+  <video class="bandvid lazyvid" muted loop playsinline preload="none" poster="media/bosque.jpg"><source data-src="media/bosque.mp4" type="video/mp4"></video>
+  <div class="gband-in">
+    <div class="gband-eyebrow">Lo que protegemos</div>
+    <div class="gband-quote">Bosque nativo, agua que aún corre limpia, fauna que todavía encuentra silencio.</div>
+  </div>
+</div>
+
+<!-- IMPACTO -->
+<section class="section model">
+  <div class="inner">
+    <div class="eyebrow">Tu impacto</div>
+    <h2 class="stitle">Un terreno que enciende una red.</h2>
+    <div class="srule"></div>
+    <p class="ssub">Cuando compras un terreno y te vuelves embajador, no proteges solo tu parcela — entras a una comunidad que hace crecer el territorio protegido. Y no se detiene en ti.</p>
+
+    <div class="net">
+      <style>
+      .net{margin-top:20px}
+      .net-hud{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-bottom:12px}
+      .net-stat-n{font-family:var(--fr);font-weight:700;font-size:38px;line-height:1;color:#0F4A5E}
+      .net-stat-l{font-family:var(--it);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#6a8472;margin-top:5px}
+      .net-bar-wrap{flex:1;min-width:190px}
+      .net-track{height:9px;background:#E3ECE5;border-radius:6px;overflow:hidden}
+      .net-bar{height:100%;width:0;background:linear-gradient(90deg,#3E6B4F,#0F4A5E);border-radius:6px;transition:width .9s ease}
+      .net-goal{font-family:var(--it);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#8a9a8f;margin-top:7px}
+      .net-goal.hit{color:#0F4A5E;font-weight:700}
+      .net-steps{display:flex;align-items:center;justify-content:center;gap:0;margin:2px 0 12px;flex-wrap:wrap}
+      .nstep{font-family:var(--it);font-size:11px;font-weight:600;letter-spacing:.04em;color:#9aa89e;background:#EEF2EC;border:1px solid #E0E7DD;padding:5px 12px;border-radius:999px;transition:all .35s ease;white-space:nowrap}
+      .nstep+.nstep{margin-left:6px}
+      .nstep.on{color:#fff;background:#3E6B4F;border-color:#3E6B4F;transform:translateY(-1px);box-shadow:0 3px 9px rgba(62,107,79,.28)}
+      .net-stage{position:relative;background-image:linear-gradient(180deg,rgba(247,246,242,0.46),rgba(237,230,214,0.62)),url('assets/renders/cartografia-cuenca.jpg');background-size:cover;background-position:center 42%;border:1px solid #E6E2D6;border-radius:14px;padding:6px;overflow:hidden;transition:box-shadow .5s ease}
+      .net-stage svg{width:100%;height:auto;display:block;overflow:visible}
+      .net-halo{opacity:0;transition:opacity .9s ease}
+      .net-halo.on{opacity:1}
+      .net-edge{stroke:#0F4A5E;stroke-opacity:.72;stroke-width:2.4;fill:none;stroke-linecap:round;filter:drop-shadow(0 0 1.6px rgba(255,255,255,.85))}
+      .net-pulse{fill:#7AAFC2;filter:drop-shadow(0 0 4px rgba(122,175,194,.9))}
+      .net-cell{transform-box:fill-box;transform-origin:center;transform:scale(0);opacity:0;transition:transform .5s cubic-bezier(.34,1.56,.64,1),opacity .4s;filter:drop-shadow(0 0 3px rgba(255,255,255,.95)) drop-shadow(0 1px 2px rgba(0,0,0,.30))}
+      .net-cell.on{transform:scale(1);opacity:1}
+      .net-mem{fill:none;stroke-opacity:.55}
+      .net-tu{font-family:var(--it);font-weight:700;font-size:11px;fill:#fff;letter-spacing:.05em}
+      .net-ring{fill:none;stroke:#0F4A5E;stroke-width:2;transform-box:fill-box;transform-origin:center;animation:netpulse 2.1s ease-out infinite}
+      @keyframes netpulse{0%{transform:scale(1);stroke-opacity:.6}70%{transform:scale(2.7);stroke-opacity:0}100%{transform:scale(2.7);stroke-opacity:0}}
+      .net-legend{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin:12px auto 0;font-family:var(--it);font-size:11px;color:#7d8c82}
+      .net-legend span{display:inline-flex;align-items:center;gap:7px}
+      .lg-cell{width:11px;height:11px;border-radius:50%;background:#3E6B4F;display:inline-block}
+      .lg-halo{width:15px;height:15px;border-radius:50%;background:radial-gradient(circle,rgba(62,107,79,.5),rgba(62,107,79,0));display:inline-block}
+      .lg-edge{width:16px;height:0;border-top:2px solid #3E6B4F;display:inline-block;opacity:.6}
+      .net-cap{text-align:center;font-family:var(--fr);font-style:italic;font-weight:500;font-size:clamp(18px,2.2vw,26px);line-height:1.35;color:#0F4A5E;margin:16px auto 0;max-width:780px;min-height:2.4em;opacity:1;transition:opacity .26s ease;text-wrap:balance}
+      .net-foot{text-align:center;font-family:var(--it);font-size:11px;color:#9aa89e;margin-top:10px;font-style:italic}
+      @media(prefers-reduced-motion:reduce){.net-cell,.net-halo{transition:none}.net-ring{animation:none}}
+      </style>
+      <div class="net-hud">
+        <div><div class="net-stat-n" id="netE">0</div><div class="net-stat-l">embajadores en la red</div></div>
+        <div><div class="net-stat-n" id="netH">0</div><div class="net-stat-l">hectáreas del corredor · proyección</div></div>
+        <div class="net-bar-wrap"><div class="net-track"><div class="net-bar" id="netBar"></div></div><div class="net-goal" id="netGoal">visión 2040 · 17.000 ha</div></div>
+      </div>
+      <div class="net-steps" id="netSteps">
+        <span class="nstep on">Tú</span><span class="nstep">×2</span><span class="nstep">×4</span><span class="nstep">×8</span><span class="nstep">×16</span><span class="nstep">×32</span>
+      </div>
+      <div class="net-stage">
+        <svg viewBox="0 0 1000 470" id="netSvg" role="img" aria-label="Animación: empiezas con un terreno y la red de embajadores se multiplica, haciendo crecer el corredor protegido hacia la visión 2040 de 17.000 hectáreas">
+          <defs>
+            <radialGradient id="haloGrad"><stop offset="0%" stop-color="#dbeef2" stop-opacity="0.55"/><stop offset="45%" stop-color="#6fae86" stop-opacity="0.28"/><stop offset="100%" stop-color="#3E6B4F" stop-opacity="0"/></radialGradient>
+          </defs>
+          <g id="netHalos"></g>
+          <g id="netEdges"></g>
+          <g id="netPulses"></g>
+          <g id="netCells"></g>
+        </svg>
+      </div>
+      <div class="net-legend">
+        <span><i class="lg-cell"></i> un embajador · un terreno</span>
+        <span><i class="lg-halo"></i> el territorio que se suma</span>
+        <span><i class="lg-edge"></i> una invitación</span>
+      </div>
+      <div class="net-cap" id="netCap">Compras un terreno y te vuelves parte de la red que protege el territorio.</div>
+      <div class="net-foot">Proyección ilustrativa de cómo crece la comunidad de embajadores y el corredor protegido.</div>
+      <script>(function(){
+        var svg=document.getElementById('netSvg'); if(!svg)return;
+        var NS='http://www.w3.org/2000/svg';
+        var HAL=document.getElementById('netHalos'), EDG=document.getElementById('netEdges'),
+            PUL=document.getElementById('netPulses'), CEL=document.getElementById('netCells');
+        var cx=500, cy=430, B=2, MAXGEN=5, HAPER=550;
+        var Rx=[0,135,250,340,415,470], Ry=[0,108,188,252,300,332], CR=[18,13,10,8,6.5,5], HR=[80,72,64,57,51,46];
+        var COL=['#0F4A5E','#245e5a','#3E6B4F','#4A7C59','#5d8a6b','#6f9a7d'];
+        var nodes=[], edges=[];
+        function layout(n,a0,a1,g){
+          n.gen=g; var an=(a0+a1)/2;
+          n.x=cx+Math.cos(an)*Rx[g]; n.y=cy+Math.sin(an)*Ry[g]; nodes.push(n);
+          if(g>=MAXGEN) return;
+          for(var i=0;i<B;i++){var c={}; edges.push({p:n,c:c,gen:g+1}); layout(c, a0+i*(a1-a0)/B, a0+(i+1)*(a1-a0)/B, g+1);}
+        }
+        layout({}, -Math.PI*0.94, -Math.PI*0.06, 0);
+        var byGen={}, edgeByGen={};
+        nodes.forEach(function(n){
+          var g=Math.min(n.gen,CR.length-1);
+          var h=document.createElementNS(NS,'circle'); h.setAttribute('class','net-halo');
+          h.setAttribute('cx',n.x.toFixed(1)); h.setAttribute('cy',n.y.toFixed(1)); h.setAttribute('r',HR[g]); h.setAttribute('fill','url(#haloGrad)');
+          HAL.appendChild(h); n.halo=h;
+          var el=document.createElementNS(NS,'g'); el.setAttribute('class','net-cell');
+          el.setAttribute('transform','translate('+n.x.toFixed(1)+','+n.y.toFixed(1)+')');
+          var inner='<circle class="net-mem" r="'+(CR[g]+3)+'" stroke="'+COL[g]+'"/><circle r="'+CR[g]+'" fill="'+COL[g]+'"/>';
+          if(n.gen===0){ inner='<circle class="net-ring" r="'+(CR[g]+4)+'"/>'+inner+'<text class="net-tu" text-anchor="middle" dy="3.6">TÚ</text>'; }
+          el.innerHTML=inner;
+          CEL.appendChild(el); n.el=el; (byGen[n.gen]=byGen[n.gen]||[]).push(n);
+        });
+        edges.forEach(function(e){
+          var ln=document.createElementNS(NS,'path'); ln.setAttribute('class','net-edge');
+          ln.setAttribute('d','M'+e.p.x.toFixed(1)+','+e.p.y.toFixed(1)+' L'+e.c.x.toFixed(1)+','+e.c.y.toFixed(1));
+          var L=Math.hypot(e.c.x-e.p.x,e.c.y-e.p.y).toFixed(1);
+          ln.style.strokeDasharray=L; ln.style.strokeDashoffset=L; ln.style.transition='stroke-dashoffset .5s ease';
+          ln.dataset.len=L; EDG.appendChild(ln); e.el=ln; (edgeByGen[e.gen]=edgeByGen[e.gen]||[]).push(e);
+        });
+        var CUM=[]; (function(){var t=0;for(var g=0;g<=MAXGEN;g++){t+=Math.pow(B,g);CUM.push(t);}})();
+        var elE=document.getElementById('netE'),elH=document.getElementById('netH'),bar=document.getElementById('netBar'),goal=document.getElementById('netGoal'),cap=document.getElementById('netCap');
+        var steps=document.getElementById('netSteps').querySelectorAll('.nstep');
+        var stage=document.querySelector('.net-stage');
+        var CAP=[
+          'Compras un terreno y te vuelves parte de la red que protege el territorio.',
+          'Invitas a otros. La red se duplica.',
+          'Y cada uno invita a los suyos. La red se multiplica.',
+          'Como un bosque que se siembra a sí mismo — cada embajador, un territorio más protegido.',
+          'Juntos, hacia el corredor: la visión 2040 de 17.000 hectáreas.',
+          'Y no se detiene. Cada terreno protegido hace posible el siguiente.'
+        ];
+        function fmt(n){return Math.round(n).toLocaleString('es-CL');}
+        function tween(el,a,b,d){var t0=null;function st(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/d);var e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;el.textContent=fmt(a+(b-a)*e);if(p<1)requestAnimationFrame(st);}requestAnimationFrame(st);}
+        function setCap(t){cap.style.opacity=0;setTimeout(function(){cap.textContent=t;cap.style.opacity=1;},250);}
+        function pulse(e){
+          var d=document.createElementNS(NS,'circle'); d.setAttribute('class','net-pulse'); d.setAttribute('r','3.6'); PUL.appendChild(d);
+          var t0=null,dur=520;
+          function st(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/dur);
+            d.setAttribute('cx',(e.p.x+(e.c.x-e.p.x)*p).toFixed(1)); d.setAttribute('cy',(e.p.y+(e.c.y-e.p.y)*p).toFixed(1));
+            d.setAttribute('opacity',(p<.18?p/.18:1-(p-.18)/.82).toFixed(2));
+            if(p<1)requestAnimationFrame(st); else if(d.parentNode)PUL.removeChild(d);
+          } requestAnimationFrame(st);
+        }
+        var timers=[], metaHit=false;
+        function clr(){timers.forEach(clearTimeout);timers=[];}
+        function flashMeta(){ stage.style.boxShadow='0 0 0 3px rgba(62,107,79,.55), 0 0 34px rgba(62,107,79,.32)'; setTimeout(function(){stage.style.boxShadow='none';},950); }
+        function reveal(g,prevHa){
+          (edgeByGen[g]||[]).forEach(function(e){e.el.style.strokeDashoffset=0; pulse(e);});
+          (byGen[g]||[]).forEach(function(n,idx){timers.push(setTimeout(function(){n.el.classList.add('on'); n.halo.classList.add('on');}, idx*40));});
+          for(var s=0;s<=g&&s<steps.length;s++){steps[s].classList.add('on');}
+          var ha=CUM[g]*HAPER;
+          tween(elE, CUM[Math.max(0,g-1)], CUM[g], 700);
+          tween(elH, prevHa, ha, 850);
+          bar.style.width=Math.min(100, ha/17000*100)+'%';
+          if(ha>=17000 && !metaHit){metaHit=true; goal.textContent='17.000 ha ✓ visión 2040'; goal.classList.add('hit'); flashMeta();}
+          setCap(CAP[g]);
+        }
+        function run(){
+          metaHit=false; goal.textContent='visión 2040 · 17.000 ha'; goal.classList.remove('hit');
+          nodes.forEach(function(n){n.el.classList.remove('on'); n.halo.classList.remove('on');});
+          edges.forEach(function(e){e.el.style.strokeDashoffset=e.el.dataset.len;});
+          for(var i=1;i<steps.length;i++){steps[i].classList.remove('on');}
+          elE.textContent='0'; elH.textContent='0'; bar.style.width='0%'; cap.textContent=CAP[0];
+          timers.push(setTimeout(function(){reveal(0,0);},500));
+          for(var g=1;g<=MAXGEN;g++){(function(g){timers.push(setTimeout(function(){reveal(g, CUM[g-1]*HAPER);},500+g*1500));})(g);}
+          timers.push(setTimeout(function(){clr();run();},500+(MAXGEN+1)*1500+3000));
+        }
+        var started=false;
+        var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!started){started=true;run();}});},{threshold:.3});
+        io.observe(svg);
+      })();</script>
+    </div>
+
+    <div class="cas-strip">
+      <div><span>01</span><h4>La Fundación</h4><p>Tu compra financia a la Fundación sin fines de lucro que custodia el Derecho Real de Conservación. La protección no depende de ningún dueño.</p></div>
+      <div><span>02</span><h4>Expansión del territorio</h4><p>Cada compra suma nuevas hectáreas a la red de parques — la meta 2030 es alcanzar 5.000 ha bajo custodia.</p></div>
+      <div><span>03</span><h4>Restauración ecológica</h4><p>Reforestación con especies nativas, cercos que protegen la regeneración y monitoreo de fauna.</p></div>
+      <div><span>04</span><h4>Comunidad local</h4><p>Educación ambiental y trabajo conjunto con Puerto Sánchez y los actores de la Región de Aysén.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LA FUNDACIÓN -->
+<section class="section parks">
+  <div class="inner" style="max-width:840px;">
+    <div class="eyebrow">La Fundación</div>
+    <h2 class="stitle">Quien lo cuida para siempre.</h2>
+    <div class="srule"></div>
+    <div class="sbody">
+      <p>La <strong>Fundación Parques la Patagonia</strong> es la entidad sin fines de lucro que garantiza y custodia el Derecho Real de Conservación a perpetuidad. Es el centro ético del proyecto — independiente del brazo comercial.</p>
+      <p>Tu compra la sostiene; ella sostiene el territorio. Los nombres de los dueños cambiarán con los años; la Fundación permanece, velando porque lo protegido siga protegido para siempre.</p>
+    </div>
+    <a href="https://arrai-ccc.github.io/parques-fundacion/" target="_blank" rel="noopener" style="display:inline-block;margin-top:26px;border:1px solid var(--bosque);color:var(--bosque);font-family:var(--it);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:13px 26px;border-radius:999px;text-decoration:none;">Conoce la Fundación →</a>
+  </div>
+</section>
+
+<!-- EMBAJADORES BAND -->
+<div class="gband" style="background-image:url('assets/Fotos%20Parque%20Terrazas/DJI_20241208112201_0023_D.JPG');">
+  <video class="bandvid lazyvid" muted loop playsinline preload="none" poster="media/embajadores.jpg"><source data-src="media/embajadores.mp4" type="video/mp4"></video>
+  <div class="gband-in">
+    <div class="gband-eyebrow">La comunidad de embajadores</div>
+    <div class="gband-quote">Buscamos coherencia. Una comunidad pequeña, unida por valores — personas que eligen habitar la Patagonia con responsabilidad y cuidarla para quienes vienen.</div>
+  </div>
+</div>
+
+<!-- TERRENOS EXPLORER -->
+<section class="section lots" id="terrenos">
+  <div class="wide">
+    <div class="eyebrow">Los terrenos</div>
+    <h2 class="stitle">Encuentra tu lugar en el territorio.</h2>
+    <div class="srule"></div>
+    <p class="ssub">Cada terreno vive en un sector con su propio carácter — vista, privacidad, cercanía al agua, bosque, acceso. Vuela sobre el territorio real, elige tu terreno y míralo desde todos los ángulos.</p>
+  </div>
+  <div class="viewer-wrap">
+    <iframe class="viewer-frame" src="ver-tu-terreno.html" loading="lazy" allowfullscreen title="Vuelo 3D — terrenos Parque Terrazas del Lago"></iframe>
+    <button class="viewer-expand" onclick="var w=this.closest('.viewer-wrap'); if(w.requestFullscreen){w.requestFullscreen();} else if(w.webkitRequestFullscreen){w.webkitRequestFullscreen();}">⛶ Pantalla completa</button>
+  </div>
+  <div class="wide">
+    <div class="lots-note">El catastro real de Terrazas del Lago está cargado en el mapa: vuela, explora cada terreno y su ubicación en el parque. El precio y las condiciones de cada terreno se conversan según su sector — <a href="#contacto" style="color:var(--bosque);font-weight:600;text-decoration:none;border-bottom:1px solid var(--rule);">escríbenos y te contamos →</a></div>
+    <div style="display:flex;gap:14px;margin-bottom:40px;flex-wrap:wrap;">
+      <a href="mapa-terrenos.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--bosque);color:#fff;font-family:var(--it);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:12px 22px;border-radius:999px;text-decoration:none;">Mapa interactivo de terrenos →</a>
+      <a href="ver-tu-terreno.html" style="display:inline-flex;align-items:center;gap:8px;border:1px solid var(--bosque);color:var(--bosque);font-family:var(--it);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:12px 22px;border-radius:999px;text-decoration:none;">↗ Ver tu terreno en 3D</a>
+    </div>
+    <div class="sectors">
+      <div class="sector">
+        <div class="sector-photo" style="background-image:url('assets/Fotos%20Parque%20Terrazas/DJI_20241208171308_0052_D.JPG');"></div>
+        <div class="sector-body">
+          <div class="sector-name">Mirador del Lago</div>
+          <p class="sector-desc">Terrazas altas con vistas abiertas al General Carrera. Para quien busca el horizonte.</p>
+          <div class="sector-chars"><span>Vista abierta</span><span>Terrazas naturales</span></div>
+        </div>
+      </div>
+      <div class="sector">
+        <div class="sector-photo" style="background-image:url('assets/Fotos%20Parque%20Terrazas/DJI_20241208112514_0036_D.JPG');"></div>
+        <div class="sector-body">
+          <div class="sector-name">Bosque Nativo</div>
+          <p class="sector-desc">Inmersión en lenga y ñirre, máxima privacidad y silencio. Para quien busca refugio.</p>
+          <div class="sector-chars"><span>Bosque</span><span>Privacidad</span></div>
+        </div>
+      </div>
+      <div class="sector">
+        <div class="sector-photo" style="background-image:url('assets/Fotos%20Parque%20Terrazas/DJI_20241208111600_0016_D.JPG');"></div>
+        <div class="sector-body">
+          <div class="sector-name">Ribera</div>
+          <p class="sector-desc">Cercanía al agua y al borde, con vistas al lago. Para quien busca la orilla.</p>
+          <div class="sector-chars"><span>Cerca del agua</span><span>Borde de lago</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LLAVE EN MANO -->
+<section class="section" id="llave-en-mano" style="background:linear-gradient(180deg,#fff,#ede6d6);">
+  <div class="inner">
+    <div class="eyebrow">Llave en mano</div>
+    <h2 class="stitle">Tu terreno, listo para habitar.</h2>
+    <div class="srule"></div>
+    <p class="ssub">Para quienes quieren llegar y quedarse. Adquieres tu terreno junto a una cabaña diseñada para el lugar — arquitectura de baja intervención, integrada al paisaje, construida por nuestro equipo. Tú eliges el terreno; nosotros lo dejamos listo.</p>
+    <figure style="margin:30px 0 0;">
+      <div style="width:100%;aspect-ratio:16/8.3;background-image:url('assets/renders/refugio-penon.jpg');background-size:cover;background-position:center;border-radius:12px;box-shadow:0 24px 64px rgba(15,74,94,.20);"></div>
+      <figcaption style="text-align:center;font-family:var(--fr);font-style:italic;font-size:13px;color:var(--piedra);margin-top:13px;">Refugio Terrazas · render conceptual del formato de cabaña integrada</figcaption>
+    </figure>
+    <div style="display:flex;gap:28px;flex-wrap:wrap;margin-top:26px;align-items:center;justify-content:space-between;">
+      <div style="display:flex;gap:30px;flex-wrap:wrap;font-family:var(--it);font-size:13.5px;color:var(--piedra);">
+        <span><b style="color:var(--abisal);font-family:var(--fr);font-size:16px;">Baja intervención</b><br>arquitectura para el lugar</span>
+        <span><b style="color:var(--abisal);font-family:var(--fr);font-size:16px;">Equipo propio</b><br>diseño y construcción</span>
+        <span><b style="color:var(--abisal);font-family:var(--fr);font-size:16px;">Entrega coordinada</b><br>con tu compra</span>
+      </div>
+      <a href="#contacto" style="display:inline-flex;align-items:center;gap:8px;background:var(--bosque);color:#fff;font-family:var(--it);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:13px 26px;border-radius:999px;text-decoration:none;white-space:nowrap;">Conversemos tu llave en mano →</a>
+    </div>
+  </div>
+</section>
+
+<!-- MOMENTOS -->
+<section class="momentos">
+  <div class="momentos-head"><div class="eyebrow">Momentos en el territorio</div></div>
+  <div class="momentos-inner">
+    <video class="lazyvid" muted loop playsinline preload="none" poster="media/reel-valle.jpg"><source data-src="media/reel-valle.mp4" type="video/mp4"></video>
+    <video class="lazyvid" muted loop playsinline preload="none" poster="media/reel-bosque.jpg"><source data-src="media/reel-bosque.mp4" type="video/mp4"></video>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="mapsec">
+  <div class="map-head">
+    <div class="eyebrow">Dónde estamos</div>
+    <h2>Sobre el Lago General Carrera, Aysén.</h2>
+    <p>En la comuna de Río Ibáñez, cerca de Puerto Sánchez — el segundo lago más grande de Sudamérica, rodeado de cordillera, bosque nativo y glaciares.</p>
+  </div>
+  <div class="map-wrap">
+    <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Puerto%20S%C3%A1nchez,%20Ays%C3%A9n,%20Chile&z=9&output=embed"></iframe>
+    <div class="map-corner"><strong>Región de Aysén</strong>Comuna de Río Ibáñez · Lago General Carrera · Patagonia chilena<br><a href="mapa-terrenos.html" style="pointer-events:auto;color:var(--glaciar);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-top:6px;text-decoration:underline;">Abrir mapa interactivo de terrenos →</a></div>
+  </div>
+</section>
+
+<!-- CÓMO SE ENTRA (de-gated) -->
+<section class="section enter" id="financiamiento">
+  <div class="inner">
+    <div class="eyebrow">Cómo se entra</div>
+    <h2 class="stitle">Distintas formas de hacerlo tuyo.</h2>
+    <div class="srule"></div>
+    <div class="enter-hook">
+      <h3>«Custodiar un parque no debería requerir todo el capital de una vez.»</h3>
+      <div class="sub">Ofrecemos financiamiento directo, sin depender del banco. Las condiciones se conversan según el terreno, el sector y tu situación — a tu medida. Escríbenos y armamos juntos la forma que te acomoda.</div>
+    </div>
+    <div class="enter-ways">
+      <div class="way"><h4>Compra directa</h4><p>Adquieres tu terreno y te vuelves embajador desde el primer día.</p></div>
+      <div class="way"><h4>Financiamiento del proyecto</h4><p>Entras con un pie y avanzas en cuotas, sin esperar la aprobación de un banco.</p></div>
+      <div class="way"><h4>Llave en mano</h4><p>Tu terreno junto a una cabaña integrada al paisaje, coordinada con tu compra.</p></div>
+    </div>
+    <a href="#contacto" class="enter-cta">Conversemos las condiciones →</a>
+  </div>
+</section>
+
+<!-- CAMINO -->
+<section class="section camino" id="camino">
+  <div class="camino-bg"></div>
+  <video class="bandvid lazyvid" muted loop playsinline preload="none" poster="media/camino.jpg"><source data-src="media/camino.mp4" type="video/mp4"></video>
+  <div class="camino-grad"></div>
+  <div class="inner">
+    <div class="eyebrow">El Camino del Embajador</div>
+    <h2 class="stitle">Ven a conocer la tierra que vas a proteger.</h2>
+    <p>Una travesía donde dejas de ser visitante y te vuelves embajador. Es una inmersión real en el territorio — y la mejor forma de saber si este lugar es tuyo. El viaje es el primer paso del camino. Primeros viajes en diciembre 2026.</p>
+    <a href="el-camino-del-embajador.html" style="display:inline-block;margin-top:24px;background:var(--glaciar);color:var(--abisal);font-family:var(--it);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:13px 26px;border-radius:999px;text-decoration:none;">Conocer El Camino del Embajador →</a>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+  <div class="inner">
+    <div class="eyebrow" style="color:var(--helecho);">Conversemos</div>
+    <h2>Una invitación a custodiar uno de los territorios más extraordinarios del planeta.</h2>
+    <p>Déjanos tu email y te contamos más — qué sector se ajusta a ti y cómo entrar.</p>
+    <form class="lead" data-lead="contacto" onsubmit="return submitLead(event,this)" style="margin-top:28px;">
+      <input type="email" name="email" required placeholder="tu@email.com" aria-label="Tu email">
+      <input type="text" name="website_url" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+      <button type="submit">Quiero saber más</button>
+    </form>
+    <div class="lead-ok" hidden>Gracias — te escribimos pronto. ✦</div>
+    <div class="contact-alt">
+      <!-- TODO Felipe: reemplazar el número por el WhatsApp comercial real -->
+      <a href="https://wa.me/56900000000" target="_blank" rel="noopener" data-todo="whatsapp-number">WhatsApp</a>
+      <a href="mailto:hola@parqueslapatagonia.cl">hola@parqueslapatagonia.cl</a>
+      <!-- TODO Felipe: verificar handle de Instagram -->
+      <a href="https://instagram.com/parqueslapatagoniacl" target="_blank" rel="noopener" data-todo="instagram-handle">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>Parques la Patagonia</strong> · Región de Aysén · Chile<br>
+  Red de parques privados de conservación protegidos a perpetuidad por Derecho Real de Conservación<br>
+  <div class="foot-links">
+    <a href="https://arrai-ccc.github.io/parques-fundacion/" target="_blank" rel="noopener">La Fundación</a>
+    <a href="#terrenos">Los terrenos</a>
+    <a href="#contacto">Conversemos</a>
+  </div>
+  <span style="opacity:0.6;font-size:11px;display:block;margin-top:14px;">Todas las imágenes son reales, capturadas en terreno — sin IA.</span>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+  window.addEventListener('scroll', onScroll); onScroll();
+  // lead capture → ARRAI survey engine (CF Worker + D1). Leads land under survey_id 'parques-comercial-leads'.
+  const LEAD_ENDPOINT = "https://arrai-survey-engine.fuenzalidasantos.workers.dev/api/surveys/parques-comercial-leads/responses";
+  function submitLead(e, form){
+    e.preventDefault();
+    var email=form.email.value.trim();
+    var hp=(form.website_url&&form.website_url.value)||'';
+    var cta=form.getAttribute('data-lead')||'';
+    var ok=form.parentElement.querySelector('.lead-ok');
+    var finish=function(){ form.style.display='none'; if(ok) ok.hidden=false; };
+    if(LEAD_ENDPOINT){ fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({language:'es',email:email,website_url:hp,answers:{source:'sitio-comercial-v2',cta:cta,page:location.pathname,ts:new Date().toISOString()}})}).then(finish).catch(finish); }
+    else { finish(); }
+    return false;
+  }
+  // lazy videos — load + play only when near the viewport
+  var lv=document.querySelectorAll('video.lazyvid');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;
+      if(e.isIntersecting){var s=v.querySelector('source[data-src]'); if(s&&!s.src){s.src=s.getAttribute('data-src'); v.load();} v.play().catch(function(){});}
+      else { v.pause(); }
+    });},{rootMargin:'250px'});
+    lv.forEach(function(v){io.observe(v);});
+  } else { lv.forEach(function(v){var s=v.querySelector('source[data-src]'); if(s){s.src=s.getAttribute('data-src'); v.load(); v.play().catch(function(){});}}); }
+</script>
+</body>
+</html>

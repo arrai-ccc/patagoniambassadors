@@ -51,7 +51,16 @@
   .nav-inv:hover{background:var(--abisal);color:#fff;box-shadow:0 4px 16px rgba(15,74,94,0.45);}
   .nav.scrolled .nav-inv{background:var(--glaciar);color:var(--abisal);}
   .nav.scrolled .nav-inv:hover{background:var(--abisal);color:#fff;}
-  @media(max-width:820px){.nav-links a:not(.nav-cta):not(.nav-fund):not(.nav-inv){display:none;}.nav-links{gap:11px;}}
+  .nav-lang{display:inline-flex;align-items:center;gap:6px;font-family:var(--it);font-size:12px;font-weight:600;letter-spacing:.06em;}
+  .nav-lang .on{color:#fff;}
+  .nav-lang a{color:rgba(255,255,255,0.5);text-decoration:none;transition:color .2s;}
+  .nav-lang a:hover{color:var(--glaciar);}
+  .nav-lang .sep{color:rgba(255,255,255,0.3);}
+  .nav.scrolled .nav-lang .on{color:var(--abisal);}
+  .nav.scrolled .nav-lang a{color:var(--piedra);}
+  .nav.scrolled .nav-lang a:hover{color:var(--bosque);}
+  .nav.scrolled .nav-lang .sep{color:var(--rule);}
+  @media(max-width:820px){.nav-links > a:not(.nav-cta):not(.nav-fund):not(.nav-inv){display:none;}.nav-links{gap:11px;}}
 
   /* hero */
   .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--abisal);}
@@ -256,6 +265,7 @@
     <a href="#terrenos">Los terrenos</a>
     <a href="#camino">El Camino</a>
     <a href="#preguntas">Preguntas</a>
+    <div class="nav-lang"><span class="on">ES</span><span class="sep">/</span><a href="en/">EN</a></div>
     <a href="#hacer-mas" class="nav-inv">Inversores</a>
     <a href="https://arrai-ccc.github.io/parques-fundacion/" target="_blank" rel="noopener" class="nav-fund">Fundación ↗</a>
     <a href="#contacto" class="nav-cta">Conversemos</a>
